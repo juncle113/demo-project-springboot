@@ -1,0 +1,7 @@
+server:
+  # 端口号
+  port: 8082
+
+spring:
+  profiles:
+    include: common, dao

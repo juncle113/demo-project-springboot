@@ -1,0 +1,42 @@
+公告: notice
+社区公告: notice
+项目公告: project notice, project
+回报公告: return notice, return
+管理员: admin
+系统管理员: root
+日志: log
+用户: user
+登录密码: password
+支付密码: pay password
+主键: id
+标题: title
+预览: preview
+作者: author
+网址: url
+内容: content
+类型: type
+备注: remark
+状态: status
+删除标识: deleted
+创建时间: created time
+创建人id: created by id
+创建人用户名: created by name
+修改时间: modified time
+修改人id: modified by id
+修改人用户名: modified by name
+验证码: verification code, code
+中文: Chinese
+英文: English
+用户名: user name
+邮箱: email
+邀请码: invitation code
+手机号归属地代码: area code
+手机号: phone
+上级邀请人: parent
+价值总量: 1
+社区公示: 1
+投资油田: 1
+我的消息: 1
+资产管理: 1
+
+

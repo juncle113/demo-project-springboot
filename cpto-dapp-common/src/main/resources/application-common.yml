@@ -1,0 +1,120 @@
+spring:
+  profiles:
+    active: local
+
+  jackson:
+    time-zone: GMT-8
+    date-format: yyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null
+
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:/ehcache.xml
+
+  #邮箱配置
+  mail:
+    # QQ
+    #    host: smtp.qq.com
+    #    port: 465
+    #    username: xxxx@qq.com
+    #    # QQ邮箱的授权码
+    #    password: xxxx
+    #    default-encoding: UTF-8
+    #    properties:
+    #      mail:
+    #        display:
+    #          sendmail: CPTO
+    #          sendname: CPTO Verification Code
+    #        smtp:
+    #          auth: true
+    #          starttls:
+    #            enable: true
+    #            required: true
+    #          ssl:
+    #            enable: true
+    #          socketFactory:
+    #            port: 465
+    #            class: javax.net.ssl.SSLSocketFactory
+
+    # Gmail
+    protocol: smtp
+    host: smtp.gmail.com
+    from: username@gmail.com
+    username: username@gmail.com
+    # Gmail邮箱的应用专用密码
+    password: rhpwebyqlogjzzez
+    default-encoding: UTF-8
+    properties:
+      mail:
+        display:
+          sendmail: CPTO
+          sendname: CPTO Verification Code
+        smtp:
+          auth: true
+          port: 465
+          enable: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+          starttls:
+            enable: true
+            required: true
+            port: 587
+
+# 自定义配置
+custom:
+
+  # 区块链
+  chain:
+    btc:
+      user: user
+      password: password
+      url: url
+      withdraw-address: btc-withdraw-address
+
+    eth:
+      url: url
+      recovery-address: 0xbaa5fd8dd2c135bd514862349bdfde1b74ebcb9e
+      withdraw-address: eth-withdraw-address
+
+  # 验证码
+  code:
+    # 是否开启发送和验证功能
+    enable: true
+    # 信息模板
+    message-template: 【CPTO】您的验证码是：{0}。{1}分钟内有效，请勿泄露给他人。
+    message-template-en: 【CPTO】Your verification code：{0}. It's effective within {1} minutes. Don't let it out to others.
+    # 随机生成数字位数
+    length: 6
+    # 超时时间（分钟）
+    timeout: 10
+
+  # 短信平台(国际线路)
+  sms:
+    # 是否开启发送功能
+    enable: true
+    # 发送短信服务商接口地址
+    url: http://intapi.253.com/send/json
+    # 账号
+    account: account
+    # 密码
+    password: password
+
+  # 系统邮箱
+  mail:
+    # 是否开启发送功能
+    enable: true
+    # 验证码
+    code:
+      # 标题
+      subject: 【CPTO】验证码
+      subject-en: 【CPTO】Verification Code
+
+  # 其他(等待设置到数据库)
+  other:
+    # 每日反馈次数
+    feedback-day-times: 5
+    # 邀请奖励次数
+    invite-reward-times: 20
